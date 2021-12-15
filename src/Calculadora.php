@@ -15,4 +15,9 @@ class calculadora
         return $this->num1 / $this->num2;
     }
 
+    public function mulstiplicar()
+    {
+        return $this->num1 * $this->num2;
+    }
+    
 }
