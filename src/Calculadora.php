@@ -19,5 +19,9 @@ class calculadora
     {
         return $this->num1 * $this->num2;
     }
+    public function resta()
+    {
+        return $this->num1 - $this->num2;
+    }
     
 }
