@@ -13,6 +13,10 @@ class CalculadoraTest extends \PHPUnit\Framework\TestCase {
         $calc = new Calculadora(9, 9);
         $this->assertEquals(81, $calc->mulstiplicar());
     }
-    
+    public function testResta()
+    {
+        $calc = new calculadora(3, 4);
+        $this->assertEquals(-1, $calc->resta());
+    }
 
 }
