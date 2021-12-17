@@ -25,7 +25,7 @@ class calculadora
     }
     public function suma()
     {
-        return $this->num1 - $this->num2;
+        return $this->num1 + $this->num2;
     }
     
 }
