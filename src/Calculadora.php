@@ -23,5 +23,9 @@ class calculadora
     {
         return $this->num1 - $this->num2;
     }
+    public function suma()
+    {
+        return $this->num1 + $this->num2;
+    }
     
 }

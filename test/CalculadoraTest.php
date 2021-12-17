@@ -18,5 +18,10 @@ class CalculadoraTest extends \PHPUnit\Framework\TestCase {
         $calc = new calculadora(3, 4);
         $this->assertEquals(-1, $calc->resta());
     }
+    public function testSuma()
+    {
+        $calc = new calculadora(3, 4);
+        $this->assertEquals(7, $calc->suma());
+    }
 
 }
