@@ -23,6 +23,10 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build
-        run: docker build -t ${{ secrets.DOCKER_USER }}/prueba .
+        run: |
+            docker build -t ${{ secrets.DOCKER_USER }}/prueba:${{github.sha}} .
+            docker build ${{ secrets.DOCKER_USER }}/prueba:latest .
       - name: Push
-        run: docker push ${{ secrets.DOCKER_USER }}/prueba:latest
+        run: |
+            docker push -t ${{ secrets.DOCKER_USER }}/prueba:${{github.sha}} .
+            docker push ${{ secrets.DOCKER_USER }}/prueba:latest .
