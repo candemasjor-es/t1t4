@@ -17,3 +17,12 @@ jobs:
           bootstrap: vendor/autoload.php
           configuration: test/phpunit.xml
           args: --coverage-text
+      # Runs a single command using the runners shell
+      - name: Docker login
+        run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      # Runs a set of commands using the runners shell
+      - name: Build
+        run: docker build -t ${{ secrets.DOCKER_USER }}/prueba .
+      - name: Push
+        run: docker push ${{ secrets.DOCKER_USER }}/prueba:latest
