@@ -28,5 +28,5 @@ jobs:
             docker build -t ${{ secrets.DOCKER_USER }}/prueba:latest .
       - name: Push
         run: |
-            docker push -t ${{ secrets.DOCKER_USER }}/prueba:${{github.sha}}
-            docker push -t ${{ secrets.DOCKER_USER }}/prueba:latest
+            docker push ${{ secrets.DOCKER_USER }}/prueba:${{github.sha}}
+            docker push ${{ secrets.DOCKER_USER }}/prueba:latest
